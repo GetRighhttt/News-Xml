@@ -1,6 +1,6 @@
 # NewsFeed
 
-NewsFeed is a native Android application for browsing, searching, reading, and saving current news articles. It retrieves headlines from [NewsData.io](https://newsdata.io/), opens articles in an in-app WebView, and stores saved articles locally for later access.
+NewsFeed is an Android app for browsing, searching, reading, and saving news articles. It retrieves headlines from [NewsData.io](https://newsdata.io/), opens articles in an in-app WebView, and stores saved articles locally with Room.
 
 The project uses a single-activity architecture with MVVM, use cases, repository abstractions, Hilt dependency injection, and separate remote and local data sources.
 
@@ -18,13 +18,11 @@ The project uses a single-activity architecture with MVVM, use cases, repository
 
 ## Screenshots
 
-The current UI uses an editorial layout with a warm accent color, elevated article cards, edge-to-edge spacing, and a focused saved-news experience.
+The screenshots show the headlines, saved articles, and in-app reader.
 
 | Headlines | Saved news | Article reader |
 | --- | --- | --- |
 | ![NewsFeed headlines screen](docs/screenshots/newsfeed-home.png) | ![NewsFeed saved news screen](docs/screenshots/newsfeed-saved.png) | ![NewsFeed article reader screen](docs/screenshots/newsfeed-webview.png) |
-
-The app also includes in-app article reading, search, swipe-to-delete saved articles, and undo support.
 
 ## Tech stack
 
@@ -80,8 +78,7 @@ Data flows from the presentation layer through domain use cases and repository c
 
 4. Run the `app` configuration on an emulator or physical device.
 
-> [!IMPORTANT]
-> Never commit `local.properties` or a real API key. If a key is exposed, revoke it and generate a replacement through NewsData.io.
+Keep `local.properties` and real API keys out of Git. If a key is exposed, revoke it through NewsData.io and generate a replacement.
 
 ## Build and verification
 
